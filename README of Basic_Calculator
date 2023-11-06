@@ -1,0 +1,36 @@
+******Initialize student data:******
+The program starts with a string variable `studentData` that contains student records in a specific format. 
+Each record consists of a student's name, followed by a colon and their score. The records are separated by commas and spaces.
+
+
+*******Split data into individual records:******
+  The program splits the `studentData` string into individual records using the `split(", ")` method, 
+resulting in an array called `records`.
+
+
+********Initialize arrays for student names and scores:*********
+The program creates two arrays, `studentNames` and `studentScores`, to store the names and scores of the students. 
+The size of these arrays is determined by the number of records.
+
+
+*******Populate the arrays with data:**********
+   - A loop goes through each record, splitting it using the colon (":") as a separator. It checks if each record has two parts
+ (name and score). If not, it prints an error message and exits.
+   - If the record is formatted correctly, it stores the student's name in the `studentNames` array and attempts to parse and store 
+the score as an integer in the `studentScores` array. If parsing the score fails, it prints an error message and exits.
+
+
+ *********Calculate and display statistics:************
+   - The program initializes variables for the total score, highest score, and lowest score.
+   - It also initializes strings for the names of the highest and lowest scorers.
+   - Another loop goes through the students to calculate statistics:
+     - It accumulates the total score.
+     - It compares each student's score with the current highest and lowest scores, updating them if necessary.
+     - It keeps track of the names of the students with the highest and lowest scores.
+   
+******Display the results:********
+   - After processing all the records, the program prints the following statistics:
+     - Total number of students.
+     - Average score of all students (calculated by dividing the total score by the number of students).
+     - Highest score achieved and the student who achieved it.
+     - Lowest score achieved and the student who achieved it.
