@@ -1,0 +1,33 @@
+*****Import the Scanner class:*****
+The program begins by importing the `Scanner` class, which allows user input to be read.
+
+*****Declare variables:*****
+   - `double num1, num2, result;` declares three double variables to store the two numbers and the result of the calculation.
+   - `char operator;` declares a character variable to store the operator (+, -, *, or /).
+
+***** Display a welcome message:*****
+   - The program prints a welcome message and prompts the user to enter an expression.
+
+***** Read the input expression:******
+   - The program reads the user's input as a string using `input.nextLine()` and stores it in the `expression` variable.
+
+*****Split the expression into tokens:*****
+    The input expression is split into tokens (parts) using a space as the delimiter. The result is stored in the `tokens` array.
+
+****** Check for valid input:*******
+   - The program checks if the `tokens` array has exactly three elements (number, operator, number). If not, it displays 
+      an error message and exits.
+
+***** Parse the numbers and operator:******
+   - The program attempts to parse the first and third elements of the `tokens` array as double values (the two numbers) and the 
+    second element as a character (the operator). If any parsing fails, it displays an error message and exits.
+
+*****Perform the calculation:******
+   - Using a `switch` statement, the program checks the operator and performs the corresponding calculation. For example, if the
+       operator is '+', it adds `num1` and `num2` and stores the result in the `result` variable.
+
+*******Handle special cases:*******
+   - If the operator is '/', the program checks if `num2` is zero to avoid division by zero and displays an error message if necessary.
+
+****** Display the result:********
+   - Finally, the program displays the calculated result in the format: "Result: num1 operator num2 = result."
